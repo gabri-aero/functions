@@ -12,7 +12,7 @@
 #include <chrono>
 #include <complex>
 #include <iostream>
-#include "Fourier.hpp"
+#include <fft>
 #include "Plm.hpp"
 
 /**
