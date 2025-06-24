@@ -1,0 +1,8 @@
+#ifndef _FUNCTIONS_MODULE_HPP_
+#define _FUNCTIONS_MODULE_HPP_
+
+#include <include/functions/Flmp.hpp>
+#include <include/functions/Plm.hpp>
+#include <include/functions/Nlm.hpp>
+
+#endif // _FUNCTIONS_MODULE_HPP_
