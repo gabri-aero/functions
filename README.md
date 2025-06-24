@@ -13,7 +13,7 @@
 ## TO DO
 - Eccentricity functions
 
-## Usage
+## Setup
 
 ### Makefile
 
