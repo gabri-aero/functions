@@ -7,9 +7,9 @@
 > A static library of functions used in astrodynamics.
 
 ## Features
-- Fully-normalized Associated Legendre functions through standard forward column recursive approach (Holmes & Featherstone, 2002). First and second order derivatives are also supported.
-- Fully-normalized inclination function computation through FFT (Wagner, 1983). First derivatives can also be computed similarly. Besides, cross-track inclination functions computation is provided (Balmino et al., 1996).
-- Full-normalization constants (Heiskanen & Moritz, 1967).
+- Associated Legendre functions through standard forward column recursive approach (Holmes & Featherstone, 2002). First and second order derivatives are also supported.
+- Inclination function computation through FFT (Wagner, 1983). First derivatives can also be computed similarly. Besides, cross-track inclination functions computation is provided (Balmino et al., 1996).
+- Full-normalization constants (Heiskanen & Moritz, 1967). Fully-normalized versions of the functions are also available.
 
 ## TO DO
 - Eccentricity functions
