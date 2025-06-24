@@ -1,5 +1,5 @@
 /**
- * @file Plm.hpp
+ * @file Plm.cpp
  *
  * @brief Source file for defining Associated Legendre Functions (ALFs)
  *

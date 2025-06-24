@@ -1,5 +1,5 @@
 /**
- * @file Nlm.hpp
+ * @file Nlm.cpp
  *
  * @brief Source file for computing normalization constants for spherical harmonics
  *

@@ -9,9 +9,6 @@
 #include <cmath>
 
 #include <Eigen/Dense>
-#include <chrono>
-#include <complex>
-#include <iostream>
 #include <fft>
 #include "Plm.hpp"
 

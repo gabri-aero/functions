@@ -9,7 +9,7 @@
 #ifndef _PLM_HPP_
 #define _PLM_HPP_
 
-#include <math.h>
+#include <cmath>
 
 #include "Nlm.hpp"
 
@@ -76,10 +76,9 @@ public:
     Plm();
     /**
      * Class constructor
-     * @tparam double Data type of ALFs and derivatives
      * @param l_max Maximum degree to which the ALFs (or its derivatives) are computed. Note that to
      * compute the derivatives up to a degree L, it is necessary to compute the ALFs up to degree
-     * L+2.
+     * L+2. This is automatically handled based on derivative flags.
      * @param theta Co-latitude at which the ALFs (and its derivatives) are evaluated
      * @param derivatives Flag to indicate whether derivatives are computed or not
      * @param second_derivatives Flag to indicate whether 2nd order derivatives are computed or not
