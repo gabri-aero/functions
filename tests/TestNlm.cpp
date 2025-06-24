@@ -1,4 +1,4 @@
-#include "gtest/gtest.h"
+#include <gtest/gtest.h>
 #include <functions/Plm.hpp>
 
 double factorial(int n)
@@ -8,7 +8,7 @@ double factorial(int n)
 
 TEST(Nlm, Value)
 {
-    Nlm<> nlm(10);
+    Nlm nlm(10);
     double d0m;
     for (int l = 0; l < 5; l++)
     {
