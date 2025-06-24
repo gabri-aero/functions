@@ -47,6 +47,12 @@ FUNCTIONS_LIB_FLAGS = -L$(FUNCTIONS_DIR)/lib -lfunctions            # link flags
 #include <functions>
 ```
 
+## Tests
+The unit tests can be built and run as follows:
+```sh
+make test
+```
+
 ## References
 
 Balmino, G., Schrama, E., & Sneeuw, N. (1996). Compatibility of first-order circular orbit perturbations theories; consequences for cross-track inclination functions. _Journal of Geodesy, 70_(9), 554–561. https://doi.org/10.1007/bf00867863
