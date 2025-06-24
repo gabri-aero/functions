@@ -2,6 +2,7 @@
 
 ![Version](https://img.shields.io/badge/version-0.0.1-blue.svg)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/gabri-aero/fft/blob/main/LICENSE)
+[![docs](https://img.shields.io/badge/Doxygen-Documentation-5A7BA7?logo=doxygen&logoColor=white&style=flat)](https://gabri-aero.github.io/functions/)
 
 > A static library of functions used in astrodynamics.
 
