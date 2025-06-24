@@ -20,7 +20,7 @@
 
 1. Clone this repository into your `external` folder
 ```sh
-git clone https://github.com/gabri-aero/functions
+git clone --recurse-submodules https://github.com/gabri-aero/functions
 ```
 2. Build the library
 ```sh
@@ -33,8 +33,8 @@ make
 FUNCTIONS_DIR = $(EXTERNAL_DIR)/functions
 
 # Define flags for compiler
-FUNCTIONS_INCLUDE = -I$(FUNCTIONS_DIR)/include/ -I$(FUNCTIONS_DIR)  # include flags
-FUNCTIONS_LIB_FLAGS = -L$(FUNCTIONS_DIR)/lib -lfunctions            # link flags
+FUNCTIONS_INCLUDE = -I$(FUNCTIONS_DIR)/include/ -I$(FUNCTIONS_DIR) -I$(FUNCTIONS_DIR)/external/fft  # include flags
+FUNCTIONS_LIB_FLAGS = -L$(FUNCTIONS_DIR)/lib -lfunctions                                            # link flags
 ```
 
 4. Include headers in your code
