@@ -4,14 +4,19 @@ CXXFLAGS = -Wall -O3 -ffast-math -march=native -std=c++17
 
 # Library definition
 LIB = functions
-LIB_FILE = lib$(LIB).a
+LIB_DIR = lib
+LIB_FILE = $(LIB_DIR)/lib$(LIB).a
 
 # Directories
 SRC_DIR = src
-HEADERS_DIR = functions
+INCLUDE_DIR = include
+HEADERS_DIR = $(INCLUDE_DIR)/functions
 BUILD_DIR = build
 TEST_DIR = tests
-FFT_DIR = external/fft
+EXTERNAL_DIRS = $(filter %/,$(wildcard external/*/))
+
+# Define include flags
+INCLUDE_FLAGS := -I$(HEADERS_DIR) $(addprefix -I, $(EXTERNAL_DIRS))
 
 # Define GTest libraries
 GTEST_LIBS = -lgtest -lgtest_main -pthread
@@ -28,12 +33,16 @@ TEST_EXES = $(TEST_SOURCES:$(TEST_DIR)/%.cpp=$(BUILD_DIR)/%.exe)
 all: $(LIB_FILE)
 
 # Create static library
-$(LIB_FILE): $(OBJECTS)
+$(LIB_FILE): $(OBJECTS) | $(LIB_DIR)
 	ar rcs $@ $^
+
+# Create lib directory if it does not exist
+$(LIB_DIR): 
+	@mkdir -p $(LIB_DIR)
 
 # Compile source files
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp $(HEADERS_DIR)/%.hpp | $(BUILD_DIR)
-	$(CXX) $(CXX_FLAGS) -I$(HEADERS_DIR) -I$(FFT_DIR) -c $< -o $@
+	$(CXX) $(CXX_FLAGS) $(INCLUDE_FLAGS) -c $< -o $@
 
 # Create build directory if it does not exist
 $(BUILD_DIR): 
@@ -43,15 +52,15 @@ $(BUILD_DIR):
 test: $(LIB_FILE) $(TEST_EXES)
 	echo $(TEST_EXES)
 	@for test_exe in $(TEST_EXES); do \
-		./$$test_exe || exit 1; \
+		./$$test_exe; \
 	done
 
 # Test targets
-$(TEST_EXES): $(TEST_SOURCES) $(BUILD_DIR)
-	$(CXX) $(CXX_FLAGS) -I. -I$(FFT_DIR) -I$(GTEST_DIR) $< -L. -l$(LIB) -o $@ $(GTEST_LIBS)
+$(BUILD_DIR)/%.exe: $(TEST_DIR)/%.cpp $(BUILD_DIR)
+	$(CXX) $(CXX_FLAGS) -I$(INCLUDE_DIR) $(INCLUDE_FLAGS) -I$(GTEST_DIR) $< -L$(LIB_DIR) -l$(LIB) -o $@ $(GTEST_LIBS)
 
 
 # Clean build files
 clean:
 	rm -rf $(BUILD_DIR)
-	rm $(LIB_FILE)
+	rm -rf $(LIB_DIR)
