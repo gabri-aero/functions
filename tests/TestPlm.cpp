@@ -1,4 +1,4 @@
-#include <functions/Plm.hpp>
+#include <functions>
 
 #include <gtest/gtest.h>
 

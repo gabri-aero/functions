@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/gabri-aero/fft/blob/main/LICENSE)
 [![docs](https://img.shields.io/badge/Doxygen-Documentation-5A7BA7?logo=doxygen&logoColor=white&style=flat)](https://gabri-aero.github.io/functions/)
 
-> A static library of functions used in astrodynamics.
+> A header-only library of functions used in astrodynamics.
 
 ## Features
 - Associated Legendre functions through standard forward column recursive approach (Holmes & Featherstone, 2002). First and second order derivatives are also supported.
@@ -18,32 +18,26 @@
 
 ### Makefile
 
-1. Clone this repository into your `external` folder
+1. Clone [`functions`](https://github.com/gabri-aero/functions) and [`fft`](https://github.com/gabri-aero/fft) repository into your `external` folder
 ```sh
-git clone --recurse-submodules https://github.com/gabri-aero/functions
+mkdir -p external
+cd external
+git clone https://github.com/gabri-aero/functions
+git clone https://github.com/gabri-aero/fft
 ```
-2. Build the library
+2. Link to your project accordingly
 ```sh
-cd functions
-make 
-```
-3. Link to your project accordingly
-```sh
-# Define path to functions repository
+# Define path to external repositories
 FUNCTIONS_DIR = $(EXTERNAL_DIR)/functions
+FFT_DIR = $(EXTERNAL_DIR)/fft
 
 # Define flags for compiler
-FUNCTIONS_INCLUDE = -I$(FUNCTIONS_DIR)/include/ -I$(FUNCTIONS_DIR) -I$(FUNCTIONS_DIR)/external/fft  # include flags
-FUNCTIONS_LIB_FLAGS = -L$(FUNCTIONS_DIR)/lib -lfunctions                                            # link flags
+INCLUDE_FLAGS = -I$(FUNCTIONS_DIR) -I$(FFT_DIR) # include flags
 ```
 
-4. Include headers in your code
+3. Include headers in your code
 ```cpp
-// Include single headers
-#include <functions/Flmp.hpp>
-#include <functions/Plm.hpp>
-#include <functions/Nlm.hpp>
-// Alternatively all at once
+// Include headers
 #include <functions>
 ```
 

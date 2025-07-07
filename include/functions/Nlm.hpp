@@ -47,34 +47,82 @@ class Nlm
      * @param m Order
      * @return Global index
      */
-    int lm_idx(int l, int m);
+    int lm_idx(int l, int m) { return (l * (l + 1)) / 2 + m; };
 
 public:
     /**
      * Default constructor
      */
-    Nlm();
+    Nlm() {};
     /**
      * Class constructor
      * @param l_max Maximum degree and order to which the normalization constants are computed
      */
-    Nlm(int l_max);
+    Nlm(int l_max) : l_max(l_max)
+    {
+        this->_Nlm = new double[((l_max + 1) * (l_max + 2)) / 2];
+        for (int l = 0; l <= l_max; l++)
+        {
+            // Compute for m = 0
+            _Nlm[lm_idx(l, 0)] = sqrt(2 * l + 1);
+        }
+        for (int m = 1; m <= l_max; m++)
+        {
+            for (int l = m; l <= l_max; l++)
+            {
+                // Recursion for m > 0
+                _Nlm[lm_idx(l, m)] = _Nlm[lm_idx(l, m - 1)] * sqrt(1.0 / ((l - m + 1) * (l + m)));
+            }
+        }
+        // Adjust k for m>0
+        for (int m = 1; m <= l_max; m++)
+        {
+            for (int l = m; l <= l_max; l++)
+            {
+                _Nlm[lm_idx(l, m)] *= sqrt(2);
+            }
+        }
+    };
 
     // Copy assignment operator constructor
-    Nlm &operator=(const Nlm &other);
+    Nlm &operator=(const Nlm &other)
+    {
+        if (this != &other)
+        {
+            l_max = other.l_max;
+            // Allocate and assign Nlm
+            if (other._Nlm)
+            {
+                int Nlm_size = (l_max + 1) * (l_max + 2) / 2;
+                _Nlm = new double[Nlm_size];
+                std::copy(other._Nlm, other._Nlm + Nlm_size, _Nlm);
+            }
+        }
+        return *this;
+    };
 
     // Copy constructor
-    Nlm(const Nlm &other);
+    Nlm(const Nlm &other) : l_max(other.l_max)
+    {
+        // Allocate and assign Nlm
+        int Nlm_size = (l_max + 1) * (l_max + 2) / 2;
+        _Nlm = new double[Nlm_size];
+        std::copy(other._Nlm, other._Nlm + Nlm_size, _Nlm);
+    };
 
     // Destructor
-    ~Nlm();
+    ~Nlm()
+    {
+        if (_Nlm)
+            delete[] _Nlm;
+    };
 
     /**
      * @brief Getter for normalization constant
      * @param l degree
      * @param m order
      */
-    double get_Nlm(int l, int m);
+    double get_Nlm(int l, int m) { return _Nlm[lm_idx(l, m)]; };
 };
 
 #endif //_NLM_HPP_

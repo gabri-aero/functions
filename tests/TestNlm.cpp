@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <functions/Plm.hpp>
+#include <functions>
 
 double factorial(int n)
 {

@@ -1,6 +1,3 @@
-[submodule "fft"]
-	path = fft
-	url = git@github.com:gabri-aero/fft.git
 [submodule "external/fft"]
 	path = external/fft
 	url = git@github.com:gabri-aero/fft.git

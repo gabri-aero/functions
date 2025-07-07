@@ -1,7 +1,7 @@
 #include <chrono>
 #include <complex>
 
-#include <functions/Flmp.hpp>
+#include <functions>
 #include <gtest/gtest.h>
 
 double get_complex_Flmp(const Flmp &flmp, int l, int m, int p)
