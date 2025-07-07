@@ -35,7 +35,7 @@ test: $(TEST_EXES)
 
 # Test targets
 $(BUILD_DIR)/%.exe: $(TEST_DIR)/%.cpp $(BUILD_DIR)
-	$(CXX) $(CXX_FLAGS) $(INCLUDE_FLAGS) -I$(GTEST_DIR) $< -L$(LIB_DIR) -l$(LIB) -o $@ $(GTEST_LIBS)
+	$(CXX) $(CXX_FLAGS) $(INCLUDE_FLAGS) -I$(GTEST_DIR) $< -o $@ $(GTEST_LIBS)
 
 
 # Clean build files
