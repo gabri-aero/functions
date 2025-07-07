@@ -1,6 +1,6 @@
 # Compiler and flags
 CXX = g++
-CXXFLAGS = -Wall -O3 -ffast-math -march=native -std=c++17
+CXX_FLAGS = -Wall -O3 -ffast-math -march=native -std=c++17
 
 # Directories
 INCLUDE_DIR = include

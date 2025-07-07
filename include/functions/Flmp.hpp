@@ -36,11 +36,20 @@
  */
 class Flmp
 {
-    int l_idx(int l) { return (l * (l + 1) * (2 * l + 1)) / 6; }
+
+    int l_max;
+    double I;
     double *_Flmp;
     double *_dFlmp;
-    double I;
-    int l_max;
+
+    /**
+     * Function that retrieves degree starting global index
+     *
+     * @param l degree
+     *
+     * @return Degree starting global storing index
+     */
+    int l_idx(int l) { return (l * (l + 1) * (2 * l + 1)) / 6; }
     /**
      * Function that retrieves global index for a given l,m,p set
      *
@@ -70,7 +79,7 @@ public:
     /**
      * Class default constructor
      */
-    Flmp() : _Flmp(nullptr), _dFlmp(nullptr), l_max(0) {};
+    Flmp() : l_max(0), _Flmp(nullptr), _dFlmp(nullptr) {};
 
     /**
      * Class constructor
@@ -107,7 +116,7 @@ public:
         // Iterate over degree and order
         std::vector<double> C(l_max + 1), S(l_max + 1);
         Eigen::VectorX<std::complex<double>> y(N);
-        int l, m, i, lm = 0, h = N;
+        int l, m, i, lm = 0;
         for (l = 0; l <= l_max; l++)
         {
             for (m = 0; m <= l; m++)
@@ -250,7 +259,7 @@ public:
             }
             else
             {
-                _Flmp == nullptr;
+                _Flmp = nullptr;
             }
             // Assign inclination functions derivatives
             if (other._dFlmp != nullptr && other.l_max > 0)
@@ -265,7 +274,7 @@ public:
             }
             else
             {
-                _dFlmp == nullptr;
+                _dFlmp = nullptr;
             }
         }
         return *this;
@@ -274,7 +283,7 @@ public:
     /**
      * Copy constructor
      */
-    Flmp(const Flmp &other) : _Flmp(nullptr), _dFlmp(nullptr), I(other.I), l_max(other.l_max)
+    Flmp(const Flmp &other) : l_max(other.l_max), I(other.I), _Flmp(nullptr), _dFlmp(nullptr)
     {
         // Assign inclination functions
         if (other._Flmp != nullptr && other.l_max > 0)

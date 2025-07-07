@@ -54,12 +54,13 @@
  */
 class Plm
 {
+    int l_max;    // Maximum degree of ALFs
+    Nlm _Nlm;     // Normalization constants
+    double theta; // Co-latitude
+
     double *_Plm = nullptr;   // Fully-normalized ALFs
     double *_dPlm = nullptr;  // Fully-normalized ALFs co-latitude derivatives
     double *_ddPlm = nullptr; // Fully-normalized ALFs co-latitude 2nd order derivatives
-    double theta;             // Co-latitude
-    Nlm _Nlm;                 // Normalization constants
-    int l_max;                // Maximum degree of ALFs
 
     /**
      * Function that computes global index for internal data structure.
@@ -197,7 +198,7 @@ public:
     };
 
     // Copy constructor
-    Plm(const Plm &other) : theta(other.theta), _Nlm(other._Nlm), l_max(l_max)
+    Plm(const Plm &other) : l_max(other.l_max), _Nlm(other._Nlm), theta(other.theta)
     {
         // Allocate and assign Plm
         int Plm_size = (l_max + 1) * (l_max + 2) / 2;
