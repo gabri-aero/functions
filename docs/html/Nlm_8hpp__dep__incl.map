@@ -1,13 +1,7 @@
 <map id="Nlm.hpp" name="Nlm.hpp">
-<area shape="rect" id="Node000001" title="Header file for computing normalization constants for spherical harmonics." alt="" coords="54,5,131,31"/>
-<area shape="rect" id="Node000002" href="$Nlm_8cpp.html" title="Source file for computing normalization constants for spherical harmonics." alt="" coords="5,79,81,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,44,54,80,49,77,75,41"/>
-<area shape="rect" id="Node000003" href="$Plm_8hpp.html" title="Header file to define Associated Legendre Functions (ALFs) class." alt="" coords="106,79,181,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="111,41,137,77,133,80,107,44"/>
-<area shape="rect" id="Node000004" href="$Flmp_8hpp.html" title="Inclination functions." alt="" coords="51,152,134,177"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="129,117,103,153,99,150,125,114"/>
-<area shape="rect" id="Node000006" href="$Plm_8cpp.html" title="Source file for defining Associated Legendre Functions (ALFs)" alt="" coords="158,152,233,177"/>
-<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="162,114,189,150,185,153,158,117"/>
-<area shape="rect" id="Node000005" href="$Flmp_8cpp.html" title="Source file to define inclination function class." alt="" coords="51,225,134,251"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="95,191,95,225,90,225,90,191"/>
+<area shape="rect" id="Node000001" title="Header file for computing normalization constants for spherical harmonics." alt="" coords="8,5,85,31"/>
+<area shape="rect" id="Node000002" href="$Plm_8hpp.html" title="Header file to define Associated Legendre Functions (ALFs) class." alt="" coords="9,79,84,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="49,44,49,79,44,79,44,44"/>
+<area shape="rect" id="Node000003" href="$Flmp_8hpp.html" title="Inclination functions." alt="" coords="5,152,88,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="49,118,49,152,44,152,44,118"/>
 </map>

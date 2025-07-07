@@ -1,9 +1,0 @@
-<map id="Plm.hpp" name="Plm.hpp">
-<area shape="rect" id="Node000001" title="Header file to define Associated Legendre Functions (ALFs) class." alt="" coords="60,5,135,31"/>
-<area shape="rect" id="Node000002" href="$Flmp_8hpp.html" title="Inclination functions." alt="" coords="5,79,88,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,44,57,80,53,77,79,41"/>
-<area shape="rect" id="Node000004" href="$Plm_8cpp.html" title="Source file for defining Associated Legendre Functions (ALFs)" alt="" coords="112,79,187,104"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="116,40,143,77,139,80,112,43"/>
-<area shape="rect" id="Node000003" href="$Flmp_8cpp.html" title="Source file to define inclination function class." alt="" coords="5,152,88,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="49,118,49,152,44,152,44,118"/>
-</map>

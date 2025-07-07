@@ -1,8 +1,0 @@
-<map id="Plm.hpp" name="Plm.hpp">
-<area shape="rect" id="Node000001" title="Header file to define Associated Legendre Functions (ALFs) class." alt="" coords="5,5,80,31"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="11,152,74,177"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="42,32,33,79,34,110,39,138,33,139,29,110,28,78,37,31"/>
-<area shape="rect" id="Node000003" href="$Nlm_8hpp.html" title="Header file for computing normalization constants for spherical harmonics." alt="" coords="43,79,120,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="51,30,71,65,66,68,47,32"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="77,106,58,141,53,139,73,103"/>
-</map>

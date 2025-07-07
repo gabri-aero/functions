@@ -115,7 +115,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class that computes and stores the normalized inclination functions and its derivatives at a given inclination. </p>
-<p>This class computes the fully-normalized inclination functions and its derivatives applying a real FFdouble to a disturbing potential along a great circle at the associated inclination without approximation (Wagner, 1983). The same procedure can be followed for the derivative of the disturbing potential w.r.t. the inclination in order to compute the derivatives of the inclination function.</p>
+<p>This class computes the fully-normalized inclination functions and its derivatives applying a FFT to a disturbing potential along a great circle at the associated inclination without approximation (Wagner, 1983). The same procedure can be followed for the derivative of the disturbing potential w.r.t. the inclination in order to compute the derivatives of the inclination function.</p>
 <p>Further details on the normalization can also be found in <a class="el" href="Nlm_8hpp.html" title="Header file for computing normalization constants for spherical harmonics.">Nlm.hpp</a></p>
 <p>The class enables two different formulations found in literature, both \(\bar{F}_{lmp}\) (e.g. Kaula, 1966) and \(\bar{F}_{lmk}\) with \(k=l-2p\). The latter is more useful for gravity field spectral analysis. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -124,6 +124,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Flmp::Flmp </td>
@@ -132,6 +135,11 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Class default constructor </p>
 
@@ -142,6 +150,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Flmp::Flmp </td>
@@ -167,6 +178,11 @@ Public Member Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Class constructor </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -184,6 +200,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Flmp::Flmp </td>
@@ -193,6 +212,11 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Copy constructor </p>
 
@@ -203,6 +227,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Flmp::~Flmp </td>
@@ -211,6 +238,11 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Destructor </p>
 
@@ -222,6 +254,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">double Flmp::get_dFlmk </td>
@@ -247,6 +282,11 @@ Public Member Functions</h2></td></tr>
           <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Inclination function derivative getter for l,m,k set </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -265,6 +305,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">double Flmp::get_dFlmp </td>
@@ -290,6 +333,11 @@ Public Member Functions</h2></td></tr>
           <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Inclination function derivative getter for l,m,p set </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -308,6 +356,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">double Flmp::get_Flmk </td>
@@ -333,6 +384,11 @@ Public Member Functions</h2></td></tr>
           <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Inclination function getter for l,m,k set </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -351,6 +407,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">double Flmp::get_Flmk_star </td>
@@ -376,6 +435,11 @@ Public Member Functions</h2></td></tr>
           <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Cross-track inclination function derivative getter for l,m,k set </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -394,6 +458,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">double Flmp::get_Flmp </td>
@@ -419,6 +486,11 @@ Public Member Functions</h2></td></tr>
           <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Inclination function getter for l,m,p set </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -437,6 +509,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int Flmp::get_l_max </td>
@@ -445,6 +520,11 @@ Public Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Getter for maximum degree computed </p>
 
@@ -455,6 +535,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classFlmp.html">Flmp</a> &amp; Flmp::operator= </td>
@@ -464,14 +547,18 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Copy assignment operator </p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="Flmp_8hpp_source.html">Flmp.hpp</a></li>
-<li><a class="el" href="Flmp_8cpp.html">Flmp.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
